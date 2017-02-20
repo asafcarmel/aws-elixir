@@ -6,7 +6,7 @@ defmodule AWS.Request do
   Generate headers with an AWS signature version 4 for the specified request.
   """
   def sign_v4(client, method, url, headers, body) do
-    sign_v4(client, Timex.DateTime.universal, method, url, headers, body)
+    sign_v4(client, Timex.now, method, url, headers, body)
   end
 
   @doc """
